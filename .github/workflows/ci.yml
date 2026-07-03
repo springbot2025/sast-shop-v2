@@ -25,7 +25,7 @@ jobs:
     outputs:
       modules: ${{ steps.filter.outputs.modules }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Determine changed modules
         id: filter
@@ -94,7 +94,7 @@ jobs:
         module: ${{ fromJson(needs.changes.outputs.modules) }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-go@v6
         with:
@@ -140,7 +140,7 @@ jobs:
         module: ${{ fromJson(needs.changes.outputs.modules) }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-go@v6
         with:
